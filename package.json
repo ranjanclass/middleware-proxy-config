@@ -1,0 +1,23 @@
+{
+  "name": "middleware-proxy-config",
+  "version": "0.1.0",
+  "description": "Proxy Configuration which is directly consumable by middlewares like app.use()",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranjanclass/middleware-proxy-config.git"
+  },
+  "keywords": [
+    "proxy",
+    "middleware"
+  ],
+  "author": "Ranjan Sarkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ranjanclass/middleware-proxy-config/issues"
+  },
+  "homepage": "https://github.com/ranjanclass/middleware-proxy-config#readme"
+}
