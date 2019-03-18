@@ -1,0 +1,3 @@
+const userOptions = {
+    logEnabled: true
+};

@@ -1,0 +1,20 @@
+const proxy = require('htp-proxy-middleware');
+
+const proxyOptions = ()=>{
+	const proxyObjects = [];
+	Object.keys(obj).forEach((key)=>{
+		if(typeof obj[key] === 'string'){
+			proxyObjects.push(proxy(key,{target:obj[key],...proxyDefultOptions}));
+		}
+		else if (typeof obj[key] === 'object'){
+			proxyObjects.push(proxy(key,{...proxyDefultOptions,...obj[key]}));
+		}	
+	}
+	
+	return proxyObjects;
+}
+
+module.exports.proxyOptions = proxyOptions;
+
+
+

@@ -1,0 +1,28 @@
+const util = require('util');
+const userOptions = require('./user-options.js');
+
+const proxyDefultOptions = {
+    ...userOptions,
+    secure: false,
+    changeOrigin: true, 
+    logLevel: 'debug',
+    logProvider:userOptions.logEnabled ? winstonLogger : null,
+    onProxyReq: (proxyReq, req, res) => {
+                    logger.log({
+                        level: 'info',
+                        message: util.inspect(proxyReq.socket._host)  + proxyReq.path
+                    });
+    },
+    onError: (err,req,res)=>{
+        res.end(
+            `Facing below issue ${err}`
+        )
+    }
+
+};
+
+const proxyDefaultOptions = ()=>{
+	return proxyDefultOptions;
+}
+
+module.exports.proxyDefaultOptions = proxyDefaultOptions;

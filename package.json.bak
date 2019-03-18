@@ -1,6 +1,6 @@
 {
   "name": "middleware-proxy-config",
-  "version": "0.1.1",
+  "version": "0.1.0-656fafdf",
   "description": "Proxy Configuration which is directly consumable by middlewares like app.use()",
   "main": "index.js",
   "scripts": {
